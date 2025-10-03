@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById('location-input');
     const resultDiv = document.getElementById('weather-result');
 
-    // ========================================
+    // =======================================
     // HANDLER DE SUBMIT DO FORMULÁRIO
-    // ========================================
+    // =======================================
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
         const location = input.value.trim();
