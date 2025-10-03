@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Previsão do Tempo</title>
+      <link rel="icon" href="weatherapp.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">   
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-container">
+        <div class="search-header">
+            <form id="search-form" class="search-form">
+                <input 
+                    type="text" 
+                    id="location-input" 
+                    class="search-input"
+                    placeholder="Digite uma cidade..."
+                    required
+                    autocomplete="off"
+                />
+                <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i>
+                    <span>Buscar</span>
+                </button>
+            </form>
+        </div>
+
+        <div id="weather-result" class="weather-content">
+            <div class="loading-state">
+                <i class="fas fa-cloud-sun" style="font-size: 60px; margin-bottom: 20px; opacity: 0.6;"></i>
+                <p style="font-size: 18px; font-weight: 500;">Pesquise uma cidade para ver o clima</p>
+                <p style="font-size: 14px; opacity: 0.7; margin-top: 10px;">Ex: Lisboa, Porto, Coimbra...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
