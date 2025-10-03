@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const location = input.value.trim();
         if (!location) return;
 
-        // Mostra estado de loading
         showLoading();
 
         try {
@@ -58,14 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const weatherMain = current.weather[0].main.toLowerCase();
         const pressure = current.main.pressure;
 
-        // Ícone e cor do gradiente baseado no clima
         const iconClass = getWeatherIcon(weatherMain);
         const gradient = getGradientClass(weatherMain);
         
-        // Atualiza o background do body
         document.body.style.background = gradient;
 
-        // Data e hora atual
         const now = new Date();
         const dateTimeStr = now.toLocaleDateString('pt-PT', { 
             weekday: 'long', 
@@ -158,17 +154,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========================================
     function getWeatherIcon(desc) {
         const icons = {
-            clear: 'wi wi-day-sunny',          // Céu limpo
-            clouds: 'wi wi-cloudy',            // Nublado
-            rain: 'wi wi-rain',                // Chuva
-            drizzle: 'wi wi-sprinkle',         // Chuvisco
-            thunderstorm: 'wi wi-thunderstorm',// Trovoada
-            snow: 'wi wi-snow',                // Neve
-            mist: 'wi wi-fog',                 // Névoa
-            fog: 'wi wi-fog',                  // Neblina
-            haze: 'wi wi-day-haze'             // Nebulosidade
+            clear: 'wi wi-day-sunny',         
+            clouds: 'wi wi-cloudy',            
+            rain: 'wi wi-rain',                
+            drizzle: 'wi wi-sprinkle',        
+            thunderstorm: 'wi wi-thunderstorm',
+            snow: 'wi wi-snow',               
+            mist: 'wi wi-fog',                 
+            fog: 'wi wi-fog',                  
+            haze: 'wi wi-day-haze'             
         };
-        return icons[desc] || 'wi wi-cloud';   // Default: Nuvem (genérico)
+        return icons[desc] || 'wi wi-cloud';   
     }
 
 
